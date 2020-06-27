@@ -1,11 +1,11 @@
 <template>
-  <section class="navigation-module">
-
+  <section class="module">
+    module component
   </section>
 </template>
 
 <script>
 export default {
-  name: 'VNavigationModule'
+  name: 'VModule'
 }
 </script>

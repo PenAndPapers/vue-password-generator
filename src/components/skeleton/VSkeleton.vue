@@ -1,11 +1,11 @@
 <template>
-  <div class="navigation-skeleton">
-
+  <div class="skeleton">
+    skeleton component
   </div>
 </template>
 
 <script>
 export default {
-  name: 'VNavigationSkeleton'
+  name: 'VSkeleton'
 }
 </script>

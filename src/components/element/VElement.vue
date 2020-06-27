@@ -1,11 +1,11 @@
 <template>
-  <button class="btn-primary">
-
+  <button class="element">
+    element component
   </button>
 </template>
 
 <script>
 export default {
-  name: 'VButtonPrimary'
+  name: 'VElement'
 }
 </script>

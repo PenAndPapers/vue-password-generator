@@ -1,11 +1,11 @@
 <template>
-  <header>
-
+  <header class="layout">
+    layout component
   </header>
 </template>
 
 <script>
 export default {
-  name: 'VHeader'
+  name: 'VLayout'
 }
 </script>

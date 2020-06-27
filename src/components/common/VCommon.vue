@@ -1,11 +1,11 @@
 <template>
-  <article class="article-card">
-
+  <article class="common">
+    common component
   </article>
 </template>
 
 <script>
 export default {
-  name: 'VArticleCard'
+  name: 'VCommon'
 }
 </script>
