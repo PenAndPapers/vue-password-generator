@@ -1,0 +1,89 @@
+version: '3'
+
+networks:
+  vue:
+
+services:
+  # Development service
+  # Comment/remove development service block when deploying to production
+  development:
+    image: node:latest
+    container_name: development
+    volumes:
+      - ./:/var/www/vue
+    working_dir: /var/www/vue
+    command: >
+      bash -c "node -v
+      && yarn -v
+      && yarn install
+      && yarn run serve"
+    ports:
+      - "8001:8000"
+    expose: 
+      - "8001"
+    networks:
+      - vue
+  
+  # Storybook
+  storybook:
+    image: node:latest
+    container_name: storybook
+    volumes:
+      - ./:/var/www/storybook
+    working_dir: /var/www/storybook
+    command: >
+      bash -c "node -v
+      && yarn -v
+      && yarn install
+      && yarn run storybook"
+    depends_on: 
+      - development
+    ports:
+      - "9001:9000"
+    expose: 
+      - "9001"
+    networks:
+      - vue
+  
+  # Production service
+  # Comment production service block during developing your app in local
+  # Remove depends_on in production
+  production:
+    image: node:latest
+    container_name: production
+    volumes:
+      - ./:/usr/share/nginx/html
+    working_dir: /usr/share/nginx/html
+    depends_on: 
+      - development
+    command: >
+      bash -c "node -v
+      && yarn -v
+      && yarn install
+      && yarn run build"
+    networks:
+      - vue
+
+  # NGINX service
+  # Comment NGINX service block when developing your app in local
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    restart: on-failure
+    ports:
+      - "8000:80"
+    expose:
+      - "8000"
+    volumes:
+      - ./:/usr/share/nginx/html
+      - ./dc_config/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf
+      - ./dc_config/nginx/logs/access.log:/var/log/nginx/access.log
+      - ./dc_config/nginx/logs/error.log:/var/log/nginx/error.log
+    links:
+      - production
+    depends_on: 
+      - production
+    networks:
+      - vue
+
+ 
