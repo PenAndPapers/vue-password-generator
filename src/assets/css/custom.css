@@ -1,0 +1,337 @@
+*, html, body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Source Code Pro', monospace, 'Montserrat', sans-serif;
+  font-size: 1rem;
+}
+
+html, body {
+  background: #e1e1e1;
+}
+
+.rotate {
+  animation: rotation .100s linear;
+  color: #f55 !important;
+}
+
+@keyframes rotation {
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+.container {
+  width: 100%;
+  padding: 0px 1rem;
+}
+
+@media screen and (min-width: 1124px) {
+  .container {
+    width: 1124px;
+    margin: auto;
+    display: block;
+  }
+}
+
+header {
+  min-height: 35rem;
+  padding: 4rem 0rem;
+  display: flex;;
+  align-items: center;
+  justify-content: center;
+  background: rgb(57,14,122);
+  background: linear-gradient(35deg, rgba(57,14,122,1) 0%, rgba(57,14,122,1) 32%, rgba(0,123,166,1) 100%);
+}
+
+header h2 {
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: auto;
+  color: #fff;
+  margin-bottom: 2.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  header h2 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  header h2 {
+    font-size: 1.75rem;
+  }
+}
+
+.password-generator-form form {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.password-generator-form form .form-group {
+  margin-bottom: 2.5rem;
+}
+
+.password-generator-form form .checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.password-generator-form form .checkboxes > div {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 100%;
+  margin-bottom: .75rem;
+  padding: 0rem 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .password-generator-form form .checkboxes > div {
+    text-align: center;
+    justify-content: center;
+    flex: 1;
+    padding: 0rem 0rem;
+  }
+}
+
+@media screen and (min-width: 420px) and (max-width: 767px) {
+  .password-generator-form form .checkboxes > div {
+    width: 50%;
+  }
+}
+
+.password-generator-form form .checkboxes div label {
+  display: inline;
+  color: #fff;
+  font-size: 1rem;
+  margin-right: .5rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .password-generator-form form .checkboxes div label {
+    width: auto;
+    font-size: 1.25rem;
+    padding-left: 0rem;
+  }
+}
+
+.password-generator-form form .checkboxes div span {
+  display: inline;
+  color: #fff;
+  font-size: 2rem;
+  margin-right: .5rem;
+  cursor: pointer;
+}
+
+div.checkbox {
+  border: 2px solid #e1e1e1;
+  border-radius: 5px;
+  height: 1.25rem;
+  width: 1.25rem;
+  display: inline-block;
+  cursor: pointer;
+}
+
+div.checkbox.checked {
+  background: #e1e1e1;
+}
+
+.password-generator-form div.password {
+  position: relative;
+  display: flex;
+  align-items: center;
+  word-wrap: break-word;
+  padding: 1rem;
+  min-height: 12rem;
+  background: #e1e1e1;
+  border-radius: 5px;
+}
+
+.password-generator-form div.password .password__action {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 10px 0px 0px;
+  z-index: 10;
+}
+
+.password-generator-form div.password .password__action span {
+  color: #000;
+  font-size: 2rem;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.copy {
+  color: #f55 !important;
+}
+
+.password-generator-form div.password h4 {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .password-generator-form div.password h4 {
+    font-size: 1.5rem;
+  }
+}
+
+.snackbar {
+  position: fixed;
+  bottom: .5rem;
+  right: .5rem;
+  padding: 1rem 2rem;
+  background: #390e7a;
+  border-radius: 5px;
+  transition: all;
+  transition-duration: 1.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.snackbar p {
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.slidecontainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.slidecontainer span {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-left: 1rem;
+  text-align: right;
+  width: 3.5rem;
+}
+
+.slider {
+  -webkit-appearance: none;
+  flex: 1;
+  height: 10px;
+  border-radius: 5px;
+  background: #e1e1e1;
+  outline: none;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 23px;
+  height: 24px;
+  border-radius: 5px;
+  background: #f55;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 23px;
+  height: 24px;
+  border-radius: 5px;
+  background: #f55;
+  cursor: pointer;
+}
+
+.content {
+  padding: 4rem 0rem;
+}
+
+.content h2 {
+  font-size: 1.15rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: .5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .content h2 {
+    font-size: 2.5rem;
+  }
+}
+
+article {
+  margin-bottom: 2.5rem;
+}
+
+.content article:last-child {
+  margin-bottom: 0px;;
+}
+
+article.text-left {
+  text-align: left;
+}
+
+article.text-right {
+  text-align: right;
+}
+
+article div {
+  margin-bottom: .5rem;
+}
+
+article div em {
+  font-size: .75rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  article div em {
+    font-size: 1rem;
+  }
+}
+
+article a {
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+}
+
+article a em {
+  font-size: .75rem;
+  font-weight: 300;
+  color: #000;
+  font-family: 'Montserrat';
+}
+
+@media screen and (min-width: 768px) {
+  article a em {
+    font-size: .85rem;
+  }
+}
+
+.content hr {
+  margin-bottom: 2.5rem;
+  border-top: 1px solid #ccc;
+}
+
+footer .container {
+  padding: 0rem 1rem 1rem;
+}
+
+footer hr {
+  margin-bottom: 1rem;
+  border-top: 1px solid #ccc;
+}
+
+footer p {
+  text-align: center;
+  font-size: .75rem;
+}

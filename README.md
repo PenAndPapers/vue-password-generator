@@ -27,3 +27,19 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+### Using docker in development mode
+```
+docker-compose run development
+```
+
+- Open http://localhost:8011/ in your browser
+
+
+### Using docker in production mode
+```
+docker-compose run production nginx
+```
+
+- Open http://localhost:8022/ in your browser

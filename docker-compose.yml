@@ -16,6 +16,7 @@ services:
       bash -c "node -v
       && yarn -v
       && yarn install
+      && yarn lint
       && yarn run serve"
     ports:
       - "8011:8000"
@@ -35,6 +36,7 @@ services:
       bash -c "node -v
       && yarn -v
       && yarn install
+      && yarn lint
       && yarn run storybook"
     depends_on: 
       - development
