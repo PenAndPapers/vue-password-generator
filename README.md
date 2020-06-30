@@ -1,4 +1,4 @@
-# dockerized-vue
+# vue-password-generator
 
 ## Project setup
 ```
@@ -29,7 +29,9 @@ yarn lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
-### Using docker in development mode
+# Docker
+
+### Running the application using docker in development mode
 ```
 docker-compose run development
 ```
@@ -37,7 +39,7 @@ docker-compose run development
 - Open http://localhost:8011/ in your browser
 
 
-### Using docker in production mode
+### Running the application using docker in production mode
 ```
 docker-compose run production nginx
 ```
