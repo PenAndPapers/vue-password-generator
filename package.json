@@ -1,5 +1,5 @@
 {
-  "name": "dockerized-vue",
+  "name": "vue-password-generator",
   "version": "0.1.0",
   "private": true,
   "scripts": {
