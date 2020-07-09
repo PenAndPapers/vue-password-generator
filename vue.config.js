@@ -20,7 +20,7 @@ module.exports = {
     }
   },
   pwa: {
-    name: 'Vue App',
+    name: 'Password Generator',
     themeColor: '#35485e',
     manifestOptions: {
       background_color: '#40b882'
